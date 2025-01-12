@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptocurrency Price Tracker</h1>
+        
+        <div class="coin-selector">
+            <label for="coinSelect">Select Cryptocurrency:</label>
+            <select id="coinSelect">
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ethereum">Ethereum</option>
+                <option value="matic-network">Polygon (MATIC)</option>
+            </select>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" id="priceCard">
+                <h3>Current Price</h3>
+                <div class="price-container">
+                    <span class="price">$0.00</span>
+                    <span class="change">0.00%</span>
+                </div>
+                <div class="market-cap">Market Cap: $0.00</div>
+                <button onclick="refreshStats()">Refresh Stats</button>
+            </div>
+
+            <div class="card" id="deviationCard">
+                <h3>Price Deviation</h3>
+                <div class="deviation">$0.00</div>
+                <p class="deviation-info">Based on last 100 records</p>
+                <button onclick="refreshDeviation()">Calculate Deviation</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
